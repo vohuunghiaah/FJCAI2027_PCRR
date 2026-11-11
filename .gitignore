@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+data/raw/
+data/processed/
+data/splits/
+checkpoints/
+logs/
+desktop.ini
+*/desktop.ini
+**/desktop.ini
+.DS_Store
+Thumbs.db
+

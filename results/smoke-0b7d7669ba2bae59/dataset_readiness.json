@@ -1,0 +1,32 @@
+{
+  "status": "DATASET_READY",
+  "datasets": [
+    {
+      "dataset": "dry_bean",
+      "file": "G:\\My Drive\\FJCAI2027_PCRR\\data\\raw\\dry_bean.arff",
+      "format": ".arff",
+      "rows": 13611,
+      "features": 16,
+      "classes": 7,
+      "sha256": "b2a4a76a2aedfb8ed415adfc1bfc70b5f202cb00cb72e500766e364c14834014"
+    },
+    {
+      "dataset": "rice",
+      "file": "G:\\My Drive\\FJCAI2027_PCRR\\data\\raw\\rice.arff",
+      "format": ".arff",
+      "rows": 3810,
+      "features": 7,
+      "classes": 2,
+      "sha256": "1af97883100c89de2ea2972f7a28d428f4f1c14711a61defc0b0569e9eb65665"
+    },
+    {
+      "dataset": "bank_marketing",
+      "file": "G:\\My Drive\\FJCAI2027_PCRR\\data\\raw\\bank-additional-full.csv",
+      "format": ".csv",
+      "rows": 41188,
+      "features": 20,
+      "classes": 2,
+      "sha256": "74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="21" time="15.573" timestamp="2026-11-10T15:35:06.060099+07:00" hostname="DESKTOP-J0H3193"><testcase classname="tests.test_core" name="test_known_risk_values" time="0.019" /><testcase classname="tests.test_core" name="test_classification_known" time="0.015" /><testcase classname="tests.test_core" name="test_threshold_ties_and_empty_acceptance" time="0.002" /><testcase classname="tests.test_core" name="test_ecdf_and_direction" time="0.004" /><testcase classname="tests.test_core" name="test_corruptions_preserve_input_and_categories" time="0.076" /><testcase classname="tests.test_core" name="test_instability_zero_and_max" time="0.095" /><testcase classname="tests.test_core" name="test_group_splits_and_temporal" time="0.047" /><testcase classname="tests.test_core" name="test_train_only_preprocessor" time="0.029" /><testcase classname="tests.test_core" name="test_all_risk_scores_and_selection_guard" time="0.016" /><testcase classname="tests.test_core" name="test_atomic_serialization" time="0.055" /><testcase classname="tests.test_core" name="test_cluster_bootstrap_identical_scores" time="0.050" /><testcase classname="tests.test_core" name="test_temporal_conflicting_labels_do_not_drive_purge" time="0.004" /><testcase classname="tests.test_core" name="test_float32_probability_roundoff" time="0.013" /><testcase classname="tests.test_notebook_p2" name="test_p2_notebook_one_run_no_duplicate_training[False]" time="0.734" /><testcase classname="tests.test_notebook_p2" name="test_p2_notebook_one_run_no_duplicate_training[True]" time="0.016" /><testcase classname="tests.test_notebook_p4" name="test_p4_notebook_respects_configuration[FULL-False]" time="0.731"><failure message="AttributeError: 'types.SimpleNamespace' object has no attribute 'returncode'">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000214A104DDD0&gt;
+tmp_path = WindowsPath('C:/Users/vhn/AppData/Local/Temp/pytest-of-vhn/pytest-45/test_p4_notebook_respects_conf0')
+mode = 'FULL', bank = False
+
+    @pytest.mark.parametrize('mode,bank', [('FULL',False),('FULL',True),('PILOT',False)])
+    def test_p4_notebook_respects_configuration(monkeypatch,tmp_path,mode,bank):
+        notebook=json.loads((Path(__file__).resolve().parents[1]/'notebooks/04_P4_calibration.ipynb').read_text(encoding='utf-8'))
+        calls=[]
+        def fake_run(command,**kwargs):
+            calls.append(command)
+            return SimpleNamespace(stdout=f'Experiment: {mode.lower()}-fixture\nP4: PASS\n',check_returncode=lambda:None)
+        monkeypatch.setattr(subprocess,'run',fake_run)
+        scope={'ROOT':tmp_path,'MODE':mode,'BANK_EXTENSION':bank}
+&gt;       exec(''.join(notebook['cells'][5]['source']),scope)
+
+tests\test_notebook_p4.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'returncode'
+
+&lt;string&gt;:35: AttributeError</failure></testcase><testcase classname="tests.test_notebook_p4" name="test_p4_notebook_respects_configuration[FULL-True]" time="0.014"><failure message="AttributeError: 'types.SimpleNamespace' object has no attribute 'returncode'">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000214A104D110&gt;
+tmp_path = WindowsPath('C:/Users/vhn/AppData/Local/Temp/pytest-of-vhn/pytest-45/test_p4_notebook_respects_conf1')
+mode = 'FULL', bank = True
+
+    @pytest.mark.parametrize('mode,bank', [('FULL',False),('FULL',True),('PILOT',False)])
+    def test_p4_notebook_respects_configuration(monkeypatch,tmp_path,mode,bank):
+        notebook=json.loads((Path(__file__).resolve().parents[1]/'notebooks/04_P4_calibration.ipynb').read_text(encoding='utf-8'))
+        calls=[]
+        def fake_run(command,**kwargs):
+            calls.append(command)
+            return SimpleNamespace(stdout=f'Experiment: {mode.lower()}-fixture\nP4: PASS\n',check_returncode=lambda:None)
+        monkeypatch.setattr(subprocess,'run',fake_run)
+        scope={'ROOT':tmp_path,'MODE':mode,'BANK_EXTENSION':bank}
+&gt;       exec(''.join(notebook['cells'][5]['source']),scope)
+
+tests\test_notebook_p4.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'returncode'
+
+&lt;string&gt;:35: AttributeError</failure></testcase><testcase classname="tests.test_notebook_p4" name="test_p4_notebook_respects_configuration[PILOT-False]" time="0.012"><failure message="AttributeError: 'types.SimpleNamespace' object has no attribute 'returncode'">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000214A108B590&gt;
+tmp_path = WindowsPath('C:/Users/vhn/AppData/Local/Temp/pytest-of-vhn/pytest-45/test_p4_notebook_respects_conf2')
+mode = 'PILOT', bank = False
+
+    @pytest.mark.parametrize('mode,bank', [('FULL',False),('FULL',True),('PILOT',False)])
+    def test_p4_notebook_respects_configuration(monkeypatch,tmp_path,mode,bank):
+        notebook=json.loads((Path(__file__).resolve().parents[1]/'notebooks/04_P4_calibration.ipynb').read_text(encoding='utf-8'))
+        calls=[]
+        def fake_run(command,**kwargs):
+            calls.append(command)
+            return SimpleNamespace(stdout=f'Experiment: {mode.lower()}-fixture\nP4: PASS\n',check_returncode=lambda:None)
+        monkeypatch.setattr(subprocess,'run',fake_run)
+        scope={'ROOT':tmp_path,'MODE':mode,'BANK_EXTENSION':bank}
+&gt;       exec(''.join(notebook['cells'][5]['source']),scope)
+
+tests\test_notebook_p4.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'returncode'
+
+&lt;string&gt;:35: AttributeError</failure></testcase><testcase classname="tests.test_runner" name="test_environment_drift_diagnostic" time="0.044" /><testcase classname="tests.test_runner" name="test_missing_previous_run_diagnostic" time="0.005" /><testcase classname="tests.test_runner" name="test_stage_all_retains_passed_stages_and_one_experiment" time="5.184" /></testsuite></testsuites>

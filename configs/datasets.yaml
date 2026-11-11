@@ -1,0 +1,16 @@
+dry_bean:
+  rows: 13611
+  features: 16
+  labels: [BARBUNYA, BOMBAY, CALI, DERMASON, HOROZ, SEKER, SIRA]
+  temporal: false
+rice:
+  rows: 3810
+  features: 7
+  labels: [Cammeo, Osmancik]
+  temporal: false
+bank_marketing:
+  rows: 41188
+  features: 20
+  labels: ['no', 'yes']
+  temporal: true
+  provenance: https://archive.ics.uci.edu/dataset/222/bank+marketing

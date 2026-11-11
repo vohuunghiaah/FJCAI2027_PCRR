@@ -1,0 +1,8 @@
+{
+  "checkpoints/pilot-0c42a7ee168ac5f3/rice/mlp/42/model.joblib": "8a7c6e7a178fcf534f85eb185124044339552d49d4bedfb158ccbba6d0ec7715",
+  "checkpoints/pilot-0c42a7ee168ac5f3/rice/rf/42/model.joblib": "139faef24f27a143c2b0a103a4c3b578003676661380463091c4ff952869a0b3",
+  "checkpoints/pilot-0c42a7ee168ac5f3/rice/lr/42/model.joblib": "03a14001e8df84091244ecec77c479fe26b01125db58e7eba4df860c5b545b32",
+  "checkpoints/pilot-0c42a7ee168ac5f3/dry_bean/mlp/42/model.joblib": "6f9e37a58bdfb38c6aa5e117e20d85abc680f0b287b05dc971fe7e8e8ccee8e8",
+  "checkpoints/pilot-0c42a7ee168ac5f3/dry_bean/rf/42/model.joblib": "4cf6cfd9f4f0628c199f765029b314c44c4cef1500f3c507e6692f9cb0f5768a",
+  "checkpoints/pilot-0c42a7ee168ac5f3/dry_bean/lr/42/model.joblib": "f575fd4783b576232b90ade007e7045f6d029eb6d7e52a14bc85fc14888eeff6"
+}

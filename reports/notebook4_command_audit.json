@@ -1,0 +1,106 @@
+{
+  "reason": "Configuration FULL was overridden by hardcoded PILOT/all command",
+  "original_execution_cell": {
+    "cell_type": "code",
+    "execution_count": 23,
+    "id": "b538b2c4",
+    "metadata": {
+      "colab": {
+        "base_uri": "https://localhost:8080/"
+      },
+      "id": "b538b2c4",
+      "executionInfo": {
+        "status": "ok",
+        "timestamp": 1794234771201,
+        "user_tz": -420,
+        "elapsed": 8332,
+        "user": {
+          "displayName": "Nghia Vo huu",
+          "userId": "08798074618237904989"
+        }
+      },
+      "outputId": "42c54277-3f50-4130-ad51-1ae0555db00e"
+    },
+    "outputs": [
+      {
+        "output_type": "stream",
+        "name": "stdout",
+        "text": [
+          "Experiment: pilot-0c42a7ee168ac5f3\n",
+          "P1: completed; retaining existing artifacts\n",
+          "P2: completed; retaining existing artifacts\n",
+          "P3: completed; retaining existing artifacts\n",
+          "P4: completed; retaining existing artifacts\n",
+          "P5: starting\n",
+          "P5: NOT_RUN\n",
+          "Artifacts: /content/drive/MyDrive/FJCAI2027_PCRR/results/pilot-0c42a7ee168ac5f3\n",
+          "\n"
+        ]
+      }
+    ],
+    "source": [
+      "command = [\n",
+      "    sys.executable, str(ROOT / 'run_all.py'),\n",
+      "    '--root', str(ROOT),\n",
+      "    '--mode', 'PILOT',\n",
+      "    '--stage', 'all',\n",
+      "]\n",
+      "result = subprocess.run(\n",
+      "    command, cwd=ROOT,\n",
+      "    stdout=subprocess.PIPE,\n",
+      "    stderr=subprocess.STDOUT,\n",
+      "    text=True,\n",
+      ")\n",
+      "print(result.stdout)\n",
+      "result.check_returncode()"
+    ]
+  },
+  "original_report_cell": {
+    "cell_type": "code",
+    "execution_count": 24,
+    "id": "c4ddcbf2",
+    "metadata": {
+      "id": "c4ddcbf2",
+      "executionInfo": {
+        "status": "ok",
+        "timestamp": 1794234771232,
+        "user_tz": -420,
+        "elapsed": 28,
+        "user": {
+          "displayName": "Nghia Vo huu",
+          "userId": "08798074618237904989"
+        }
+      },
+      "colab": {
+        "base_uri": "https://localhost:8080/",
+        "height": 486
+      },
+      "outputId": "d3413b59-4435-461f-9d24-fc23da11e08b"
+    },
+    "outputs": [
+      {
+        "output_type": "display_data",
+        "data": {
+          "text/plain": [
+            "<IPython.core.display.Markdown object>"
+          ],
+          "text/markdown": "# P4 Acceptance — pilot-0c42a7ee168ac5f3\n\nStatus: **PASS**\n\n## Work and evidence\n\nRisk parameters selected on Risk-Val; clean Calibration thresholds frozen with code, library and artifact hashes.\n\n## Artifacts\n\n- results/pilot-0c42a7ee168ac5f3/\n- data/processed/pilot-0c42a7ee168ac5f3/\n- checkpoints/pilot-0c42a7ee168ac5f3/\n\n## Verification\n\n`python -m pytest -q`\n\nStage command: `python run_all.py --mode PILOT --stage P4`\n\nStage PASS refers to executed runtime assertions; unit-test evidence is recorded separately in reports/IMPLEMENTATION.md.\n\n## Limits and next gate\n\nSMOKE/PILOT are development-only, not publication evidence. P5 requires FULL and verified P4 artifacts. Scientific acceptance requires inspection of actual results.\n"
+        },
+        "metadata": {}
+      },
+      {
+        "output_type": "stream",
+        "name": "stdout",
+        "text": [
+          "Detailed artifacts and status are under results/<experiment-id>/ and reports/<experiment-id>/.\n"
+        ]
+      }
+    ],
+    "source": [
+      "from IPython.display import Markdown, display\n",
+      "report = ROOT/'reports/P4_ACCEPTANCE.md'\n",
+      "if report.exists(): display(Markdown(report.read_text()))\n",
+      "print('Detailed artifacts and status are under results/<experiment-id>/ and reports/<experiment-id>/.')\n"
+    ]
+  }
+}

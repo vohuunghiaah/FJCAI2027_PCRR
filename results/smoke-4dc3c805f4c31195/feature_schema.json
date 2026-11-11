@@ -1,0 +1,49 @@
+{
+  "dry_bean": {
+    "types": {
+      "Area": "float64",
+      "Perimeter": "float64",
+      "MajorAxisLength": "float64",
+      "MinorAxisLength": "float64",
+      "AspectRation": "float64",
+      "Eccentricity": "float64",
+      "ConvexArea": "float64",
+      "EquivDiameter": "float64",
+      "Extent": "float64",
+      "Solidity": "float64",
+      "roundness": "float64",
+      "Compactness": "float64",
+      "ShapeFactor1": "float64",
+      "ShapeFactor2": "float64",
+      "ShapeFactor3": "float64",
+      "ShapeFactor4": "float64"
+    },
+    "raw_geometry": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    },
+    "labels": [
+      "BARBUNYA",
+      "BOMBAY",
+      "CALI",
+      "DERMASON",
+      "HOROZ",
+      "SEKER",
+      "SIRA"
+    ],
+    "bank_pdays": "999 -> NaN plus previously_contacted category; unknown retained",
+    "duplicate_policy": "Group-identical features; temporal cross-boundary duplicates purged"
+  }
+}

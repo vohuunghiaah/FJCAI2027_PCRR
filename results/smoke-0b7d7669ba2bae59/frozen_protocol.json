@@ -1,0 +1,521 @@
+{
+  "experiment_id": "smoke-0b7d7669ba2bae59",
+  "signature": {
+    "mode": "SMOKE",
+    "datasets": [
+      "dry_bean"
+    ],
+    "config": {
+      "datasets": {
+        "dry_bean": {
+          "rows": 13611,
+          "features": 16,
+          "labels": [
+            "BARBUNYA",
+            "BOMBAY",
+            "CALI",
+            "DERMASON",
+            "HOROZ",
+            "SEKER",
+            "SIRA"
+          ],
+          "temporal": false
+        },
+        "rice": {
+          "rows": 3810,
+          "features": 7,
+          "labels": [
+            "Cammeo",
+            "Osmancik"
+          ],
+          "temporal": false
+        },
+        "bank_marketing": {
+          "rows": 41188,
+          "features": 20,
+          "labels": [
+            "no",
+            "yes"
+          ],
+          "temporal": true,
+          "provenance": "https://archive.ics.uci.edu/dataset/222/bank+marketing"
+        }
+      },
+      "models": {
+        "lr": {
+          "C": 1.0,
+          "max_iter": 2000
+        },
+        "rf": {
+          "n_estimators": 200,
+          "min_samples_leaf": 2,
+          "n_jobs": -1
+        },
+        "mlp": {
+          "hidden": [
+            64,
+            32
+          ],
+          "learning_rate": 0.001,
+          "batch_size": 128,
+          "epochs": 100,
+          "patience": 10
+        }
+      },
+      "corruption": {
+        "missing": [
+          0.05,
+          0.1,
+          0.2
+        ],
+        "gaussian": [
+          0.01,
+          0.05,
+          0.1
+        ],
+        "quantization": [
+          0.02,
+          0.05,
+          0.1
+        ],
+        "perturbation_sigma": 0.01,
+        "perturbations": [
+          4,
+          8,
+          16
+        ],
+        "quantization_scale": "train_range"
+      },
+      "experiments": {
+        "seeds": [
+          13,
+          21,
+          42,
+          87,
+          101
+        ],
+        "split_ratios": [
+          0.6,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "grid": [
+          0,
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "coverage": [
+          0.8,
+          0.9,
+          0.95
+        ],
+        "uncertainty_bins": 10,
+        "min_bin_size": 20,
+        "bootstrap_replicates": 1000,
+        "bootstrap_seed": 2027,
+        "bank_extension": false
+      }
+    },
+    "code": {
+      "src\\__init__.py": "bd2b6f376ef2d35142171b52dd3cef0984ff294afa9768bc031f313024d4158f",
+      "src\\baselines.py": "e9ecdc181088af14a7e7585a62605340a15d6e9a6c4bfe32d1caf4b5dfd64eef",
+      "src\\calibration.py": "249420367786ab0b75dc2cc9e1b1d27e94f01525dc077b548c8ea40ec8c44010",
+      "src\\corruptions.py": "1d5dc33afd34233dd6807b9e82d6dd11756e6684d9b8230f662328526c5b555d",
+      "src\\cpcr.py": "ead891924b218b316df69fa43be9eeaed0260f64c20d9757c80c378b6e5cf607",
+      "src\\data.py": "2f7b7e4f010a32665a9d0886b9981def95026aea00351a1f29572f2a28b4613d",
+      "src\\evaluation.py": "4756dbd6f26a6c2e73b0b5be4896c6b5d30d50aafb4564d0c1e9e3966dacda9d",
+      "src\\experiment.py": "40053983ccd0a5ad8a77b6c4fe46e35107f5d354ee7e2e905ada6e692fe247d1",
+      "src\\io.py": "59731d2f9667e5527839290485a050fec269b583eabc40df2ac3a1ae8fb2f0c6",
+      "src\\metrics.py": "250371612081c839ad6aa5db46272544bed070684e7afe09b426136292e91048",
+      "src\\models.py": "86126e4d2b49ba4b1283d73038b8cf2fb9d6333e3dde10b1364b56a9fa0a852d",
+      "src\\preprocessing.py": "55bd794c224d75035b34ef74bd16a9afcf8e41948598eeab54655166e38f54f6",
+      "src\\risk_baselines.py": "321c8f40f6c36f70d1b03f8ba4d0190d8a98c88ae9cabc95833b7cd8d61dc6b4"
+    },
+    "raw_manifest": "ac7094a7b79cfecfd5e0d3861da77c13e68741221b6acdcfec1f1c215fc41679",
+    "versions": {
+      "python": "3.11.9",
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "scipy": "1.15.3",
+      "scikit-learn": "1.6.1",
+      "torch": "2.7.1",
+      "joblib": "1.4.2",
+      "PyYAML": "6.0.2"
+    }
+  },
+  "artifact_hashes": {
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\train.joblib": "c0a1474f6bac07e69575aa554315f11139f0ff7a5e471a139ee857be0a403eff",
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\model_val.joblib": "347db1fde0ef064c1a8c13ddd350f6e258ca29ab96730c50cfecd9d012db97bd",
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\risk_val.joblib": "8010307f16e528b96c440dd912cbdf64e1ad9da82a45b3c7531da49ba68153ad",
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\calibration.joblib": "52a35c3eb665cb28c4247d1c89c9b5c7608b774bd10dcd7eea91f25b0af039b7",
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\test.joblib": "77e1dac4e3b534e6fd50f51daee5cd77729af09ab91acfda5248c32b0311c129",
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\preprocessor_True.joblib": "cc6018d4739a5583b6eea8f600a22b98d098b78f69c5b872e99e67ba48c5d3d5",
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\preprocessor_False.joblib": "de2f448ce2d73b701adcaeb5000b9f0b004c1e261ecd2525b73e05eea85f53f1",
+    "data\\processed\\smoke-0b7d7669ba2bae59\\dry_bean\\42\\corruptor.joblib": "212f187711712c77ec045e6e2fe4493c636c9f5195601f14bfe05c5590033215",
+    "data\\splits\\smoke-0b7d7669ba2bae59\\dry_bean\\42.json": "3d324210b365b3d302dfaf0f612da8e457d9e949e5ce837f598a32b4bb623cda",
+    "checkpoints\\smoke-0b7d7669ba2bae59\\dry_bean\\lr\\42\\model.joblib": "63a3b971784500344f33ac638555239a6328192a971b37ec3dd97d0a400e6888",
+    "checkpoints\\smoke-0b7d7669ba2bae59\\dry_bean\\mlp\\42\\model.joblib": "ced481e0b1b63e01895b3ccab9af653ac69fb66006616e5a90e1797ab849ad0f",
+    "checkpoints\\smoke-0b7d7669ba2bae59\\dry_bean\\lr\\42\\ecdf_B8.joblib": "a83c298669a38df910bd6748317bbdecb736efc42677b89241c31eeea34f0b51",
+    "checkpoints\\smoke-0b7d7669ba2bae59\\dry_bean\\mlp\\42\\ecdf_B8.joblib": "4c55fb5504211efd0106e8c4aa346f35c41a4e411d9474d8942ce5f48773eabf",
+    "checkpoints\\smoke-0b7d7669ba2bae59\\dry_bean\\lr\\42\\development_B8.joblib": "53efaa47a5028456f3cd5a876bd96d6cbf2558d159576c87051bab948f9c92f1",
+    "checkpoints\\smoke-0b7d7669ba2bae59\\dry_bean\\mlp\\42\\development_B8.joblib": "c2300f2037032b4e679cb1bfff73b2ae996e36f0909f887fa897b6d296e52c57"
+  },
+  "selections": [
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "msp",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.021369988708064804,
+      "thresholds": {
+        "0.8": 0.1560688492944411,
+        "0.9": 0.33961755771028,
+        "0.95": 0.4416803766824754
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "entropy",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.021982549764307437,
+      "thresholds": {
+        "0.8": 0.5017559254992044,
+        "0.9": 0.7059467254080768,
+        "0.95": 0.8172445334484417
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "margin",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.02121085978762673,
+      "thresholds": {
+        "0.8": 0.282038105547328,
+        "0.9": 0.6311329553656593,
+        "0.95": 0.818237904589878
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "instability",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.024800094236631584,
+      "thresholds": {
+        "0.8": 7.253043794859635e-05,
+        "0.9": 0.00012565103325355714,
+        "0.95": 0.00017659421732043226
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "weighted",
+      "lambda": 2.0,
+      "gamma": 0.0,
+      "development_aurc": 0.0213674129496997,
+      "thresholds": {
+        "0.8": 0.15618609696806324,
+        "0.9": 0.3400199291771012,
+        "0.95": 0.44190831094094335
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "cpcr",
+      "lambda": 0,
+      "gamma": 0,
+      "development_aurc": 0.021369988708064804,
+      "thresholds": {
+        "0.8": 0.1560688492944411,
+        "0.9": 0.33961755771028,
+        "0.95": 0.4416803766824754
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "no_q",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.021369988708064804,
+      "thresholds": {
+        "0.8": 0.1560688492944411,
+        "0.9": 0.33961755771028,
+        "0.95": 0.4416803766824754
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "no_interaction",
+      "lambda": 0,
+      "gamma": 0.0,
+      "development_aurc": 0.021369988708064804,
+      "thresholds": {
+        "0.8": 0.1560688492944411,
+        "0.9": 0.33961755771028,
+        "0.95": 0.4416803766824754
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "uncertainty_only",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.021369988708064804,
+      "thresholds": {
+        "0.8": 0.1560688492944411,
+        "0.9": 0.33961755771028,
+        "0.95": 0.4416803766824754
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "instability_only",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.024800094236631584,
+      "thresholds": {
+        "0.8": 7.253043794859635e-05,
+        "0.9": 0.00012565103325355714,
+        "0.95": 0.00017659421732043226
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "lr",
+      "seed": 42,
+      "B": 8,
+      "scorer": "raw_instability",
+      "lambda": 2.0,
+      "gamma": 0,
+      "development_aurc": 0.0213674129496997,
+      "thresholds": {
+        "0.8": 0.15618609696806324,
+        "0.9": 0.3400199291771012,
+        "0.95": 0.44190831094094335
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "msp",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.018413090430712212,
+      "thresholds": {
+        "0.8": 0.10174539333292898,
+        "0.9": 0.275059193945729,
+        "0.95": 0.40447557028399495
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "entropy",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.018618082741965816,
+      "thresholds": {
+        "0.8": 0.3642550323216366,
+        "0.9": 0.6681730550690445,
+        "0.95": 0.7714910478016028
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "margin",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.018432848797507777,
+      "thresholds": {
+        "0.8": 0.1800475463159552,
+        "0.9": 0.5030740256310375,
+        "0.95": 0.7524348540441184
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "instability",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.02042186051012093,
+      "thresholds": {
+        "0.8": 6.132194475309546e-05,
+        "0.9": 0.00013424951399170244,
+        "0.95": 0.0002261916332244531
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "weighted",
+      "lambda": 0.5,
+      "gamma": 0.0,
+      "development_aurc": 0.018412390541215663,
+      "thresholds": {
+        "0.8": 0.10175735647232405,
+        "0.9": 0.27509740502792374,
+        "0.95": 0.4046188240649956
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "cpcr",
+      "lambda": 0,
+      "gamma": 0,
+      "development_aurc": 0.018413090430712212,
+      "thresholds": {
+        "0.8": 0.10174539333292898,
+        "0.9": 0.275059193945729,
+        "0.95": 0.40447557028399495
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "no_q",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.018413090430712212,
+      "thresholds": {
+        "0.8": 0.10174539333292898,
+        "0.9": 0.275059193945729,
+        "0.95": 0.40447557028399495
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "no_interaction",
+      "lambda": 0,
+      "gamma": 0.0,
+      "development_aurc": 0.018413090430712212,
+      "thresholds": {
+        "0.8": 0.10174539333292898,
+        "0.9": 0.275059193945729,
+        "0.95": 0.40447557028399495
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "uncertainty_only",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.018413090430712212,
+      "thresholds": {
+        "0.8": 0.10174539333292898,
+        "0.9": 0.275059193945729,
+        "0.95": 0.40447557028399495
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "instability_only",
+      "lambda": 0.0,
+      "gamma": 0.0,
+      "development_aurc": 0.02042186051012093,
+      "thresholds": {
+        "0.8": 6.132194475309546e-05,
+        "0.9": 0.00013424951399170244,
+        "0.95": 0.0002261916332244531
+      }
+    },
+    {
+      "dataset": "dry_bean",
+      "model": "mlp",
+      "seed": 42,
+      "B": 8,
+      "scorer": "raw_instability",
+      "lambda": 0.5,
+      "gamma": 0.5,
+      "development_aurc": 0.018412360380800807,
+      "thresholds": {
+        "0.8": 0.1017585736666473,
+        "0.9": 0.27510791533739204,
+        "0.95": 0.4046767667197612
+      }
+    }
+  ],
+  "development_conditions": [
+    [
+      "clean",
+      0.0
+    ],
+    [
+      "missing",
+      0.1
+    ],
+    [
+      "gaussian",
+      0.05
+    ]
+  ],
+  "ecdf": {
+    "fit_split": "model_val",
+    "fallback": "pooled Model-Val ECDF for sparse bins",
+    "bins": 10,
+    "min_bin_size": 20
+  },
+  "inference_device": "cpu",
+  "test_opened": false
+}

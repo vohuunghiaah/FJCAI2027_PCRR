@@ -1,0 +1,147 @@
+{
+  "mode": "SMOKE",
+  "datasets": [
+    "dry_bean"
+  ],
+  "config": {
+    "datasets": {
+      "dry_bean": {
+        "rows": 13611,
+        "features": 16,
+        "labels": [
+          "BARBUNYA",
+          "BOMBAY",
+          "CALI",
+          "DERMASON",
+          "HOROZ",
+          "SEKER",
+          "SIRA"
+        ],
+        "temporal": false
+      },
+      "rice": {
+        "rows": 3810,
+        "features": 7,
+        "labels": [
+          "Cammeo",
+          "Osmancik"
+        ],
+        "temporal": false
+      },
+      "bank_marketing": {
+        "rows": 41188,
+        "features": 20,
+        "labels": [
+          "no",
+          "yes"
+        ],
+        "temporal": true,
+        "provenance": "https://archive.ics.uci.edu/dataset/222/bank+marketing"
+      }
+    },
+    "models": {
+      "lr": {
+        "C": 1.0,
+        "max_iter": 2000
+      },
+      "rf": {
+        "n_estimators": 200,
+        "min_samples_leaf": 2,
+        "n_jobs": -1
+      },
+      "mlp": {
+        "hidden": [
+          64,
+          32
+        ],
+        "learning_rate": 0.001,
+        "batch_size": 128,
+        "epochs": 100,
+        "patience": 10
+      }
+    },
+    "corruption": {
+      "missing": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "gaussian": [
+        0.01,
+        0.05,
+        0.1
+      ],
+      "quantization": [
+        0.02,
+        0.05,
+        0.1
+      ],
+      "perturbation_sigma": 0.01,
+      "perturbations": [
+        4,
+        8,
+        16
+      ],
+      "quantization_scale": "train_range"
+    },
+    "experiments": {
+      "seeds": [
+        13,
+        21,
+        42,
+        87,
+        101
+      ],
+      "split_ratios": [
+        0.6,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "grid": [
+        0,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "coverage": [
+        0.8,
+        0.9,
+        0.95
+      ],
+      "uncertainty_bins": 10,
+      "min_bin_size": 20,
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 2027,
+      "bank_extension": false
+    }
+  },
+  "code": {
+    "src\\__init__.py": "bd2b6f376ef2d35142171b52dd3cef0984ff294afa9768bc031f313024d4158f",
+    "src\\baselines.py": "e9ecdc181088af14a7e7585a62605340a15d6e9a6c4bfe32d1caf4b5dfd64eef",
+    "src\\calibration.py": "249420367786ab0b75dc2cc9e1b1d27e94f01525dc077b548c8ea40ec8c44010",
+    "src\\corruptions.py": "1d5dc33afd34233dd6807b9e82d6dd11756e6684d9b8230f662328526c5b555d",
+    "src\\cpcr.py": "ead891924b218b316df69fa43be9eeaed0260f64c20d9757c80c378b6e5cf607",
+    "src\\data.py": "2f7b7e4f010a32665a9d0886b9981def95026aea00351a1f29572f2a28b4613d",
+    "src\\evaluation.py": "4756dbd6f26a6c2e73b0b5be4896c6b5d30d50aafb4564d0c1e9e3966dacda9d",
+    "src\\experiment.py": "beea700bdc63e331c71c3ba2ab550dd7c036321b457874e4743d152641d5d70b",
+    "src\\io.py": "59731d2f9667e5527839290485a050fec269b583eabc40df2ac3a1ae8fb2f0c6",
+    "src\\metrics.py": "250371612081c839ad6aa5db46272544bed070684e7afe09b426136292e91048",
+    "src\\models.py": "86126e4d2b49ba4b1283d73038b8cf2fb9d6333e3dde10b1364b56a9fa0a852d",
+    "src\\preprocessing.py": "55bd794c224d75035b34ef74bd16a9afcf8e41948598eeab54655166e38f54f6",
+    "src\\risk_baselines.py": "321c8f40f6c36f70d1b03f8ba4d0190d8a98c88ae9cabc95833b7cd8d61dc6b4"
+  },
+  "raw_manifest": "ac7094a7b79cfecfd5e0d3861da77c13e68741221b6acdcfec1f1c215fc41679",
+  "versions": {
+    "python": "3.11.9",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "torch": "2.7.1",
+    "joblib": "1.4.2",
+    "PyYAML": "6.0.2"
+  }
+}

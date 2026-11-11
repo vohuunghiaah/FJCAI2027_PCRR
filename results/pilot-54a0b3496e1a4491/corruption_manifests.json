@@ -1,0 +1,434 @@
+[
+  {
+    "dataset": "dry_bean",
+    "model": "lr",
+    "seed": 1027865736,
+    "condition": [
+      "clean",
+      0.0
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "lr",
+    "seed": 1976094685,
+    "condition": [
+      "missing",
+      0.1
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "lr",
+    "seed": 2130665652,
+    "condition": [
+      "gaussian",
+      0.05
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 505,
+      "isoperimetric_violation": 48
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "rf",
+    "seed": 1027865736,
+    "condition": [
+      "clean",
+      0.0
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "rf",
+    "seed": 1976094685,
+    "condition": [
+      "missing",
+      0.1
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "rf",
+    "seed": 2130665652,
+    "condition": [
+      "gaussian",
+      0.05
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 505,
+      "isoperimetric_violation": 48
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "mlp",
+    "seed": 1027865736,
+    "condition": [
+      "clean",
+      0.0
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "mlp",
+    "seed": 1976094685,
+    "condition": [
+      "missing",
+      0.1
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "dry_bean",
+    "model": "mlp",
+    "seed": 2130665652,
+    "condition": [
+      "gaussian",
+      0.05
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "MajorAxisLength_nonpositive": 0,
+      "MinorAxisLength_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "ConvexArea_nonpositive": 0,
+      "EquivDiameter_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "Solidity_out_of_unit_interval": 0,
+      "roundness_out_of_unit_interval": 0,
+      "Compactness_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 505,
+      "isoperimetric_violation": 48
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "lr",
+    "seed": 4029751014,
+    "condition": [
+      "clean",
+      0.0
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "lr",
+    "seed": 3806801751,
+    "condition": [
+      "missing",
+      0.1
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "lr",
+    "seed": 3294204098,
+    "condition": [
+      "gaussian",
+      0.05
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 7,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "rf",
+    "seed": 4029751014,
+    "condition": [
+      "clean",
+      0.0
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "rf",
+    "seed": 3806801751,
+    "condition": [
+      "missing",
+      0.1
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "rf",
+    "seed": 3294204098,
+    "condition": [
+      "gaussian",
+      0.05
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 7,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "mlp",
+    "seed": 4029751014,
+    "condition": [
+      "clean",
+      0.0
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "mlp",
+    "seed": 3806801751,
+    "condition": [
+      "missing",
+      0.1
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 0,
+      "isoperimetric_violation": 0
+    }
+  },
+  {
+    "dataset": "rice",
+    "model": "mlp",
+    "seed": 3294204098,
+    "condition": [
+      "gaussian",
+      0.05
+    ],
+    "B": 8,
+    "geometry_violations": {
+      "Area_nonpositive": 0,
+      "Perimeter_nonpositive": 0,
+      "Major_Axis_Length_nonpositive": 0,
+      "Minor_Axis_Length_nonpositive": 0,
+      "Eccentricity_out_of_unit_interval": 0,
+      "Convex_Area_nonpositive": 0,
+      "Extent_out_of_unit_interval": 0,
+      "majoraxislength_lt_minoraxislength": 0,
+      "convexarea_lt_area": 7,
+      "isoperimetric_violation": 0
+    }
+  }
+]
